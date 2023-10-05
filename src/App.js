@@ -1,10 +1,13 @@
 import React from "react";
 import "./App.css";
+import SuperPrivateProtectedContent from "./components/SuperPrivateProtectedContent";
 
 class App extends React.Component {
-  state = {};
+  state = {isAuth: false};
   render() {
-    return <div className="App"></div>;
+    return <div className="App">
+      <SuperPrivateProtectedContent isAuth={this.state.isAuth} />
+    </div>;
   }
 }
 
