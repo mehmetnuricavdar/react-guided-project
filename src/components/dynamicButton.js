@@ -1,7 +1,8 @@
 import React from "react";
+import withStyles from "../HoC/withStyles";
 
 const DynamicButton = (props) => {
-  return <button style={props.style}>Next</button>;
+  return <button style={props.styles}>Next</button>;
 };
 
-export default DynamicButton;
+export default withStyles(DynamicButton);

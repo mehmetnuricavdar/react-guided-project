@@ -8,6 +8,10 @@ const styles = {
     backgroundColor: "#9c9c9c",
     color: "#c7c6c6",
   },
+  halloween: {
+    backgroundColor: "orange",
+    color: "white",
+  },
 };
 
 export default styles;

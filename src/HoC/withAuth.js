@@ -2,8 +2,6 @@ import React from "react";
 
 function withAuth(WrappedComponent) {
   return function WrappedRender(originalProps) {
-    console.log(originalProps.isAuth);
-    
     function isAuthenticated() {
       return originalProps.isAuth;
     }
@@ -15,11 +13,7 @@ function withAuth(WrappedComponent) {
     );
     return (
       <div>
-        {isAuthenticated() === true ? (
-          <WrappedComponent />
-        ) : (
-          errMessage
-        )}
+        {isAuthenticated() === true ? <WrappedComponent /> : errMessage}
       </div>
     );
   };
